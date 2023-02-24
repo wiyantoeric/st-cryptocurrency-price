@@ -7,7 +7,7 @@ def load_data(sheets_url: str):
     csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
     return pd.read_csv(csv_url, on_bad_lines="skip")
 
-df = load_data(st.secrets["public_gsheets_url"])
+df = load_data("https://docs.google.com/spreadsheets/d/195xHzIOLpvVYWc_pNXhqTC_DNYn15xnv_aQ7F0BhNfg/edit#gid=855163300")
 
 crpyto_name = []
 crypto_symbol = []
